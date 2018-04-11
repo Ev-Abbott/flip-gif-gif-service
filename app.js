@@ -31,7 +31,7 @@ app.post('/', (req, res, next) => {
     const encoder = new GIFEncoder(600, 600);
     let name = `${payload.name}.gif`;
     
-    encoder.createReadStream().pipe(uploadFromStream(s3, {bucket: bucketName, key: name}, console.log));
+    encoder.createReadStream().pipe(uploadFromStream(s3, {bucket: bucketName, key: name}, res));
 
     encoder.start();
     encoder.setRepeat(0);   // 0 for repeat, -1 for no-repeat 
@@ -59,19 +59,17 @@ app.post('/', (req, res, next) => {
         encoder.addFrame(ctx);
     });
     
-    encoder.finish();
-    let url = `https://s3-us-west-2.amazonaws.com/flipgif-gif-directory/${name}`
-    return res.status(200).json({ message: 'SUCCESS!', link: url });
-    
+    return encoder.finish();
 });
 
-function uploadFromStream(s3, params, cb) {
+function uploadFromStream(s3, params, res) {
     var pass = new stream.PassThrough();
     
     var params = {ACL: 'public-read', Bucket: params.bucket, Key: params.key, ContentType: 'image/gif', Body: pass};
     s3.upload(params, function(err, data) {
       console.log(err);
-      cb('Uploaded!');
+      let url = `https://s3-us-west-2.amazonaws.com/flipgif-gif-directory/${name}`
+      return res.status(200).json({ message: 'SUCCESS!', link: url });
     });
   
     return pass;
