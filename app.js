@@ -31,7 +31,7 @@ app.post('/', (req, res, next) => {
     const encoder = new GIFEncoder(600, 600);
     let name = `${payload.name}.gif`;
     
-    encoder.createReadStream().pipe(uploadFromStream(s3, {bucket: bucketName, key: name}, res));
+    encoder.createReadStream().pipe(uploadFromStream(s3, {bucket: bucketName, key: name}, res, name));
 
     encoder.start();
     encoder.setRepeat(0);   // 0 for repeat, -1 for no-repeat 
@@ -62,7 +62,7 @@ app.post('/', (req, res, next) => {
     return encoder.finish();
 });
 
-function uploadFromStream(s3, params, res) {
+function uploadFromStream(s3, params, res, name) {
     var pass = new stream.PassThrough();
     
     var params = {ACL: 'public-read', Bucket: params.bucket, Key: params.key, ContentType: 'image/gif', Body: pass};
