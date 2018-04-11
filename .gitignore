@@ -1,2 +1,4 @@
 /node_modules
 /gifs
+.DS_Store
+.env
