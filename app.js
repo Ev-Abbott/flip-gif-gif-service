@@ -70,7 +70,7 @@ function uploadFromStream(s3, params) {
     
     var params = {ACL: 'public-read', Bucket: params.bucket, Key: params.key, ContentType: 'image/gif', Body: pass};
     s3.upload(params, function(err, data) {
-      console.log(err, data);
+      console.log(err);
     });
   
     return pass;
