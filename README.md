@@ -13,7 +13,7 @@ FlipGif Studio was built in 2 weeks.
 #### Backend GitHub: https://github.com/AbbottEverett/flip-gif-back-end
 #### Gif Service Github: https://github.com/AbbottEverett/flip-gif-gif-service
 
-Gif Demos of live site to be added after Capstone Presentation.
+Animated Demos of live site to be added after Capstone Presentation.
 
 ## Features
 - Browser based drawing tool which includes changing brush color, changing brush size, fill tool, clear tool, undo, redo, lightbox (see frames near to the one you are on), add frame, remove frame, save to server.
@@ -47,7 +47,9 @@ Gif Demos of live site to be added after Capstone Presentation.
 Screenshot to be added after Capstone presentation.
 
 ### Flipbook Drawing View:
-Screenshot to be added after Capstone presentation.
+![Drawing View Image](screenshots/drawview-Page1.png)
+![Drawing View 2 Image](screenshots/drawview-Page2.png)
 
-### Signup View:
-Screenshot to be added after Capstone presentation.
+### Login / Signup View:
+![Login View Image](screenshots/loginview.png)
+![Signup View Image](screenshots/signupview.png)
