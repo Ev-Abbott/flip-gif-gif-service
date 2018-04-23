@@ -7,13 +7,13 @@ FlipGif Studio is mobile-first, web application which allows users to create the
 
 FlipGif Studio was built in 2 weeks.
 
-
-### Live URL: TBD - Waiting on content creators to make gifs first
+Note: FlipGif Studio's drawing tool is currently only supported in mobile.
+### Live URL: http://flipgif-studio.surge.sh/#/
 #### Frontend GitHub: https://github.com/AbbottEverett/flip-gif-front-end
 #### Backend GitHub: https://github.com/AbbottEverett/flip-gif-back-end
 #### Gif Service Github: https://github.com/AbbottEverett/flip-gif-gif-service
 
-Animated Demos of live site to be added after Capstone Presentation.
+<iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/265487343" webkitAllowFullScreen width="640"></iframe>
 
 ## Features
 - Browser based drawing tool which includes changing brush color, changing brush size, fill tool, clear tool, undo, redo, lightbox (see frames near to the one you are on), add frame, remove frame, save to server.
@@ -44,7 +44,10 @@ Animated Demos of live site to be added after Capstone Presentation.
 
 ## Screenshots
 ### Home Page View:
-Screenshot to be added after Capstone presentation.
+![ Home View Image ](screenshots/homeview.png)
+
+### Tutorial Page View:
+![Tutorial View Image](screenshots/tutorialview.png)
 
 ### Flipbook Drawing View:
 ![Drawing View Image](screenshots/drawview-Page1.png)
