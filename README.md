@@ -13,7 +13,7 @@ Note: FlipGif Studio's drawing tool is currently only supported in mobile.
 #### Backend GitHub: https://github.com/AbbottEverett/flip-gif-back-end
 #### Gif Service Github: https://github.com/AbbottEverett/flip-gif-gif-service
 
-![flipgif demo video](screenshots/FlipGif-Studio-Demo-Video.png)
+![flipgif demo video](screenshots/FlipGif-Studio-Demo-Video.gif)
 
 ## Features
 - Browser based drawing tool which includes changing brush color, changing brush size, fill tool, clear tool, undo, redo, lightbox (see frames near to the one you are on), add frame, remove frame, save to server.
